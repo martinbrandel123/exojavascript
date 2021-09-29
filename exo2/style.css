@@ -1,0 +1,43 @@
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#e66465, #9198e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 10px #FFF solid; 
+    transform-origin: center;
+    position: relative;
+}
+.time {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform-origin: left;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: black;
+    transform: rotateZ(-90deg);
+}
+.sec {
+    width: 49%;
+}
+.min {
+    width: 40%;
+}
+.hour {
+    width: 30%
+}
+
+

@@ -1,0 +1,33 @@
+
+:root 
+{
+    --newcolor: #ffc600;
+    --padding: 10px;
+    --flou: 0px;
+}
+    
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--newcolor);
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.input_wrapper label {
+    margin: 10px 0;
+}
+img {
+    filter: blur(var(--flou));
+    padding: var(--padding);
+}
+
