@@ -1,0 +1,51 @@
+body {
+    background-image: url('./background.jpg');
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: purple;
+}
+h2 {
+    color: yellow;
+    font-size: 15px;
+}
+.wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sound {
+    background-color: black;
+    opacity: 0.5;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border: 5px yellow solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .sound_active {
+    border: 5px red solid;
+    transition: border 100ms ease-in-out;
+}
+
+
+@media screen and (max-width:1000px){
+    .wrapper {
+        max-width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+}
+
