@@ -5,6 +5,8 @@
   <title>Array Cardio 💪</title>
 </head>
 <body>
+  <label for="check"></label>
+  <input type="text" id="check">
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
   <script>
 
@@ -37,67 +39,33 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-    var birthdate = inventors.filter(function(inventor){
-       return inventor.year > 1500 && inventor.year < 1599
-    })
-    console.table(birthdate)
+    var birthdate = inventors.filter(function(inventor) {
+      if(inventor.year > 1500 && inventor.year < 1599) {
+        return inventor
+      }
+      })
+    console.log(birthdate)
 
-    // Array.prototype.map()
-    // 2. Give us an array of the inventors first and last names
-    var names = inventors.map(function(inventor) {
-        return inventor.first + ' ' + inventor.last
-    })
-    console.table(names)
-
-
-    // Array.prototype.sort()
-    // 3. Sort the inventors by birthdate, oldest to youngest
-    var date = inventors.map(function(inventor){
-         return inventor.year
-    })
-    console.table(date.sort())
-    // Array.prototype.reduce()
-    // 4. How many years did all the inventors live all together?
-    var years = inventors.map(function(inventor) {
-        return inventor.passed - inventor.year
-    })
-    function total(a, b) {
-        return a + b
-    }
-    console.log(years.reduce(total))
-
-
-    // 5. Sort the inventors by years lived
-    const oldest = inventors.sort(function(a, b) {
-      const lastInventor = a.passed - a.year;
-      const nextInventor = b.passed - b.year;
-        console.log(a.passed)
-      console.log(lastInventor + 'yo')
-      console.log(nextInventor + 'ya')
-      return lastInventor > nextInventor ? -1 : 1;
-    });
-    console.table(oldest);
-
-
-    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
-
-    // 7. sort Exercise
-    // Sort the people alphabetically by last name
+      const numbers = ["martin", 2, 3, 4, 5]
 
 
 
-   
+const inpChange = function () {
+const regexp = new RegExp (`${this.value}`, 'i')
+regexp.test(people[0])
+for (var i = 0 ; i < inventors.length; i++) {
+  if(regexp.test(inventors[i].first)) {
+      console.log(inventors[i].first)
+  } 
+}
+}
 
 
-    // 8. Reduce Exercise
-    // Sum up the instances of each of these
-    const data = ['caddddr', 'car', 'truck', 'truck', 'bikddddddddddde', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+document.getElementById("check")
+  check.addEventListener('change', inpChange)
+  check.addEventListener('keyup', inpChange)
 
 
-console.log(data.sort((a, b) => b.length - a.length))
-    
   </script>
 </body>
 </html>
